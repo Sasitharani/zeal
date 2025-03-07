@@ -31,6 +31,7 @@ const Login = () => {
             });
             const { message, hashedPassword, username } = response.data; // Extract message, hashedPassword, and username from response
                 if (message === 'Login successful') {
+                    console.log("Login successful inside loop");
                     setMessage('Login Successfully');
                     dispatch(login({ email, username })); // Dispatch login success with email and username
                     localStorage.setItem('user', JSON.stringify({ email })); // Update local storage
