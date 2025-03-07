@@ -1,28 +1,34 @@
+import React from 'react';
 import 'tailwindcss/tailwind.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout } from '../store/userSlice'; // Import logout action
 
-export default function Header() {
-  return (
-    <header className="bg-gray-800 text-white p-4">
-      <nav className="flex justify-between items-center">
-        <div className="text-2xl font-bold">Logo</div>
-        <ul className="flex space-x-4">
-          <li><a href="#home" className="hover:text-gray-400">Home</a></li>
-          <li><a href="#about" className="hover:text-gray-400">About</a></li>
-          <li><a href="#services" className="hover:text-gray-400">Courses</a></li>
-          <li><a href="#contact" className="hover:text-gray-400">Contact</a></li>
-        </ul>
-        <div className="relative">
-          <button className="bg-gray-700 px-4 py-2 rounded">Menu</button>
-          <div className="absolute right-0 mt-2 w-48 bg-white text-black rounded shadow-lg z-50"> {/* Added z-50 class */}
-            <Link to="/" className="block px-4 py-2">Home</Link>
-            <Link to="/coding" className="block px-4 py-2">Coding Training</Link>
-            <Link to="/placement" className="block px-4 py-2">Placement Training</Link>
-            <Link to="/signup" className="block px-4 py-2">Sign Up</Link>
-            <Link to="/login" className="block px-4 py-2">Login</Link> {/* Added Login link */}
-          </div>
-        </div>
-      </nav>
-    </header>
-  );
-}
+const Header = () => {
+    const isLoggedIn = useSelector(state => state.user.isLoggedIn); // Get isLoggedIn from slice
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+
+    const handleLogout = () => {
+        dispatch(logout({ meta: { fileName: 'Header.jsx' } })); // Dispatch logout action
+        localStorage.removeItem('user'); // Remove user from local storage
+        localStorage.removeItem('lastSpinTime'); // Reset last spin time
+        navigate('/'); // Redirect to home page
+    };
+
+    return (
+        <header className="bg-gray-800 p-4 text-white flex justify-between items-center">
+            <h1 className="text-xl font-bold">My App</h1>
+            <nav>
+                <Link to="/" className="mr-4">Home</Link>
+                {isLoggedIn ? (
+                    <button onClick={handleLogout} className="bg-red-500 px-4 py-2 rounded">Logout</button>
+                ) : (
+                    <Link to="/login" className="bg-blue-500 px-4 py-2 rounded">Login</Link>
+                )}
+            </nav>
+        </header>
+    );
+};
+
+export default Header;

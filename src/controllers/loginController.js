@@ -38,6 +38,7 @@ const login = async (req, res) => {
         res.status(401).send('Password does not match for email.');
         return;
       }
+      console.log('Login successful');
       res.status(200).send({ message: 'Login successful' });
     });
   } catch (error) {

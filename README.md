@@ -16,4 +16,4 @@ CREATE TABLE users (
     PRIMARY KEY (srno)
 );
 
-for server change the url of the server to run in render
+for server change the url to https://logintemplate-9976.onrender.com of the server to run in render
