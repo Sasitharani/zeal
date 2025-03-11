@@ -1,34 +1,29 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { Provider } from 'react-redux'; // Import Provider
-import store from './store'; // Import your Redux store
-import Front from './components/Front';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Provider } from 'react-redux'; // Ensure this import is present
+import store from './store'; // Assuming you have a Redux store setup
 import Header from './components/Header';
-import CodingTraining from './components/CodingTraining';
-import PlacementTraining from './components/PlacementTraining';
-import Signup from './components/Signup';
-import Login from './components/Login'; // Import Login component
-import UserProfile from './components/UserProfile'; // Import UserProfile component
-
-import './App.css';
-import './tailwind.css';
+import Home from './components/Home';
+import About from './components/About'; // Import About component
+import Contact from './components/Contact'; // Import Contact component
+import Designs from './components/Designs'; // Import Designs component
+import Portfolio from './components/Portfolio'; // Import Portfolio component
 
 function App() {
-  return (
-    <Provider store={store}> {/* Wrap with Provider */}
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Front />} />
-          <Route path="/coding" element={<CodingTraining />} />
-          <Route path="/placement" element={<PlacementTraining />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} /> {/* Added Login route */}
-          <Route path="/user-profile" element={<UserProfile />} /> {/* Add route for UserProfile */}
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-      </Router>
-    </Provider>
-  );
+    return (
+        <Provider store={store}> {/* Wrap with Provider */}
+        <Router>
+            <Header />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} /> {/* Add About route */}
+                <Route path="/contact" element={<Contact />} /> {/* Add Contact route */}
+                <Route path="/designs" element={<Designs />} /> {/* Add Designs route */}
+                <Route path="/portfolio" element={<Portfolio />} /> {/* Add Portfolio route */}
+            </Routes>
+        </Router>
+        </Provider>
+    );
 }
 
 export default App;

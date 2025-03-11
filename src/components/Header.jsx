@@ -21,6 +21,10 @@ const Header = () => {
             <h1 className="text-xl font-bold">My App</h1>
             <nav>
                 <Link to="/" className="mr-4">Home</Link>
+                <Link to="/about" className="mr-4">About</Link>
+                <Link to="/contact" className="mr-4">Contact</Link>
+                <Link to="/designs" className="mr-4">Designs</Link>
+                <Link to="/portfolio" className="mr-4">Portfolio</Link>
                 {isLoggedIn ? (
                     <button onClick={handleLogout} className="bg-red-500 px-4 py-2 rounded">Logout</button>
                 ) : (
