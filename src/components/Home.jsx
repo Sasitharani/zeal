@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaLaptopCode, FaProjectDiagram, FaFileAlt, FaGlobe, FaCogs, FaCode } from 'react-icons/fa';
+import { Link } from 'react-router-dom'; // Add this import
 
 const Home = () => {
   return (
@@ -21,7 +22,7 @@ const Home = () => {
             <p className="text-xs mt-2 text-blue-900">Creating visually appealing and user-friendly websites.</p>
           </div>
           <div className="flex-1 flex items-center justify-center relative">
-            <button className="absolute bottom-2 bg-gradient-to-r from-blue-900 to-gray-600 text-white py-1 px-3 rounded">Know More</button>
+            <Link to="/web-design" className="absolute bottom-2 bg-gradient-to-r from-blue-900 to-gray-600 text-white py-1 px-3 rounded">Know More</Link>
           </div>
         </div>
         <div id="API_dev" className="flex flex-col">
@@ -35,7 +36,7 @@ const Home = () => {
             <p className="text-xs mt-2 text-blue-900">Managing and showcasing your projects effectively.</p>
           </div>
           <div className="flex-1 flex items-center justify-center relative">
-            <button className="absolute bottom-2 bg-gradient-to-r from-blue-900 to-gray-600 text-white py-1 px-3 rounded">Know More</button>
+            <Link to="/portfolio-management" className="absolute bottom-2 bg-gradient-to-r from-blue-900 to-gray-600 text-white py-1 px-3 rounded">Know More</Link>
           </div>
         </div>
         <div id="content" className="flex flex-col">
@@ -49,7 +50,7 @@ const Home = () => {
             <p className="text-xs mt-2 text-blue-900">Organizing and maintaining your digital content.</p>
           </div>
           <div className="flex-1 flex items-center justify-center relative">
-            <button className="absolute bottom-2 bg-gradient-to-l from-blue-900 to-gray-600 text-white py-1 px-3 rounded">Know More</button>
+            <Link to="/content-management" className="absolute bottom-2 bg-gradient-to-l from-blue-900 to-gray-600 text-white py-1 px-3 rounded">Know More</Link>
           </div>
         </div>
         <div id="real_web" className="flex flex-col">
@@ -63,7 +64,7 @@ const Home = () => {
             <p className="text-xs mt-2 text-blue-900">Developing dynamic and interactive web applications.</p>
           </div>
           <div className="flex-1 flex items-center justify-center relative">
-            <button className="absolute bottom-2 bg-gradient-to-l from-blue-900 to-gray-600 text-white py-1 px-3 rounded">Know More</button>
+            <Link to="/real-time-web-application" className="absolute bottom-2 bg-gradient-to-l from-blue-900 to-gray-600 text-white py-1 px-3 rounded">Know More</Link>
           </div>
         </div>
         <div id="ERP" className="flex flex-col">
@@ -77,7 +78,7 @@ const Home = () => {
             <p className="text-xs mt-2 text-blue-900">Implementing enterprise resource planning solutions.</p>
           </div>
           <div className="flex-1 flex items-center justify-center relative">
-            <button className="absolute bottom-2 bg-gradient-to-bl from-blue-900 to-gray-600 text-white py-1 px-3 rounded">Know More</button>
+            <Link to="/erp" className="absolute bottom-2 bg-gradient-to-bl from-blue-900 to-gray-600 text-white py-1 px-3 rounded">Know More</Link>
           </div>
         </div>
         <div id="portfolio" className="flex flex-col">
@@ -91,7 +92,7 @@ const Home = () => {
             <p className="text-xs mt-2 text-blue-900">Building robust and scalable APIs for your applications.</p>
           </div>
           <div className="flex-1 flex items-center justify-center relative">
-            <button className="absolute bottom-2 bg-gradient-to-bl from-blue-900 to-gray-600 text-white py-1 px-3 rounded">Know More</button>
+            <Link to="/api-development" className="absolute bottom-2 bg-gradient-to-bl from-blue-900 to-gray-600 text-white py-1 px-3 rounded">Know More</Link>
           </div>
         </div>
       </div>
