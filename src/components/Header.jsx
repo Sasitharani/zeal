@@ -20,12 +20,12 @@ const Header = () => {
         <header className="flex">
             <div className="w-1/6 bg-white p-4 flex items-center justify-center relative h-20 overflow-hidden"> {/* Reduced width */}
                 <img src="src/img/logo.jpg" alt="Logo" className="h-20 object-contain" /> {/* Adjusted size */}
-                <div className="absolute right-0 top-0 w-8 bg-white rounded-r-full h-full"></div> {/* Arched border */}
+                <div className="absolute right-0 top-0 w-8 bg-white rounded-r-full h-48"></div> {/* Arched border */}
             </div>
-            <div className="w-1/6 bg-white flex items-center justify-center relative h-20 overflow-hidden"> {/* Rounded width*/}
-                <div className="ml-32 w-1/2 h-full bg-gradient-to-r from-white to-gray-400 rounded-tl-full"></div> {/* Quarter circle (left upper) */}
+            <div className="w-1/6 bg-white flex items-center justify-center relative h-18 overflow-hidden"> {/* Rounded width*/}
+                <div className="ml-32 w-1/2 h-full bg-gradient-to-r from-cyan-600 to-cyan-900 rounded-tl-full"></div> {/* Quarter circle (left upper) */}
             </div>
-            <div className="w-4/6 bg-gradient-to-r from-gray-400 via-gray-500 to-black p-2 text-white flex justify-start items-center relative"> {/* Balanced width */}
+            <div className="w-4/6 bg-gradient-to-r from-cyan-900 via-cyan-600 to-black p-2 text-white flex justify-start items-center relative"> {/* Balanced width */}
                 <div className="absolute left-0 top-0 w-8 bg-white rounded-r-full"></div>
                 <nav className="flex-1 flex justify-end items-center">
                     <Link to="/" className="mr-4">Home</Link>
