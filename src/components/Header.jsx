@@ -17,12 +17,12 @@ const Header = () => {
     };
 
     return (
-        <header className="flex">
-            <div className="w-1/6 bg-white p-4 flex items-center justify-center relative h-20 overflow-hidden"> {/* Reduced width */}
-                <img src="src/img/logo.jpg" alt="Logo" className="h-20 object-contain" /> {/* Adjusted size */}
-                <div className="absolute right-0 top-0 w-8 bg-white rounded-r-full h-48"></div> {/* Arched border */}
+        <header className="flex h-16"> {/* Reduced height */}
+            <div className="w-1/6 bg-white flex items-center justify-center relative overflow-hidden"> {/* Reduced width */}
+                <img src="src/img/logo.jpg" alt="Logo" className=" object-contain" /> {/* Adjusted size */}
+                <div className="absolute right-0 top-0 w-8 bg-white rounded-r-full "></div> {/* Arched border */}
             </div>
-            <div className="w-1/6 bg-white flex items-center justify-center relative h-18 overflow-hidden"> {/* Rounded width*/}
+            <div className="w-1/6 bg-white flex items-center justify-center relative  overflow-hidden"> {/* Rounded width*/}
                 <div className="ml-32 w-1/2 h-full bg-gradient-to-r from-cyan-600 to-cyan-900 rounded-tl-full"></div> {/* Quarter circle (left upper) */}
             </div>
             <div className="w-4/6 bg-gradient-to-r from-cyan-900 via-cyan-600 to-black p-2 text-white flex justify-start items-center relative"> {/* Balanced width */}
