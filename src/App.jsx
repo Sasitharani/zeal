@@ -14,13 +14,17 @@ import ContentManagement from './pages/ContentManagement';
 import RealTimeWebApplication from './pages/RealTimeWebApplication';
 import ERP from './pages/ERP';
 import APIDevelopment from './pages/APIDevelopment';
+import Navbar from './components/Navbar'; // Import Navbar component
+import Test from './components/Test'; // Import Test component
+import CustomisedDesigns from './components/CustomisedDesigns'; // Import CustomisedDesigns component
 
 function App() {
     return (
         <Provider store={store}>
             <Router>
                 <Header />
-
+                {/* Add a Link to Customised Designs */}
+           
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
@@ -33,6 +37,9 @@ function App() {
                     <Route path="/real-time-web-application" element={<RealTimeWebApplication />} />
                     <Route path="/erp" element={<ERP />} />
                     <Route path="/api-development" element={<APIDevelopment />} />
+                    <Route path="/navbar" element={<Navbar />} /> {/* Added route for Navbar */}
+                    <Route path="/test" element={<Test />} /> {/* Added route for Test */}
+                    <Route path="/customised-designs" element={<CustomisedDesigns />} /> {/* Added route */}
                 </Routes>
             </Router>
         </Provider>

@@ -28,13 +28,14 @@ const Header = () => {
             <div className="w-4/6 bg-gradient-to-r from-cyan-900 via-cyan-600 to-black p-2 text-white flex justify-start items-center relative"> {/* Balanced width */}
                 <div className="absolute left-0 top-0 w-8 bg-white rounded-r-full"></div>
                 <nav className="flex-1 flex justify-end items-center">
-                    <Link to="/" className="mr-4">Home</Link>
-                    <Link to="/about" className="mr-4">About</Link>
-                    <Link to="/contact" className="mr-4">Contact</Link>
-                    <Link to="/designs" className="mr-4">Designs</Link>
-                    <Link to="/portfolio" className="mr-4">Portfolio</Link>
+                    <Link to="/" className="mr-4 hover:shadow-lg hover:shadow-blue-500 px-4 py-2 rounded">Home</Link>
+                    <Link to="/about" className="mr-4 hover:shadow-lg hover:shadow-blue-500 px-4 py-2 rounded">About</Link>
+                    <Link to="/contact" className="mr-4 hover:shadow-lg hover:shadow-blue-500 px-4 py-2 rounded">Contact</Link>
+                    <Link to="/designs" className="mr-4 hover:shadow-lg hover:shadow-blue-500 px-4 py-2 rounded">Designs</Link>
+                    <Link to="/portfolio" className="mr-4 hover:shadow-lg hover:shadow-blue-500 px-4 py-2 rounded">Portfolio</Link>
+                    <Link to="/navbar" className="mr-4 hover:shadow-lg hover:shadow-blue-500 px-4 py-2 rounded">Navbar</Link> {/* Added Navbar link */}
                     {isLoggedIn && (
-                        <button onClick={handleLogout} className="bg-red-500 px-4 py-2 rounded">Logout</button>
+                        <button onClick={handleLogout} className="bg-red-500 px-4 py-2 rounded hover:shadow-lg hover:shadow-blue-500">Logout</button>
                     )}
                 </nav>
             </div>

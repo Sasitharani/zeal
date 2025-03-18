@@ -1,12 +1,13 @@
 import React from 'react';
+import Navbar from './Navbar';
 
 const Test = () => {
-  return (
-    <div className="text-center bg-customBlueLight2 flex flex-col h-screen overflow-hidden"> {/* Use customBlueLight2 */}
-      <h1 className="text-customBlue text-4xl">Test Page</h1> {/* Use customBlue */}
-      <p className="text-customBlueLight1 text-lg">This is a test page.</p> {/* Use customBlueLight1 */}
-    </div>
-  );
+    return (
+        <div>
+            <h1 className="text-center text-2xl font-bold text-red-600 my-4">Navbar Test Page</h1>
+            <Navbar />
+        </div>
+    );
 };
 
 export default Test;
