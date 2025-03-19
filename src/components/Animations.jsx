@@ -1,5 +1,6 @@
 import React from 'react';
 import 'tailwindcss/tailwind.css';
+import '../styles/AntBorderAnimation.css'; // Import the new CSS file
 
 const Animations = () => {
     return (
@@ -8,6 +9,7 @@ const Animations = () => {
                 <h1 className="text-2xl font-bold text-white mb-4">
                     Hover to see the animation
                 </h1>
+                {/* install npm tailwindcss-animate.css to use these animation */}
                 <div className="grid grid-cols-3 gap-4 text-white">
                     <div className="border border-white p-4 rounded hover:animate-bounce">
                         Button Shake
@@ -111,12 +113,13 @@ const Animations = () => {
                     <div className="border border-white p-4 rounded hover:animate-spinnerGrow">
                         Spinner Grow
                     </div>
-                    <div className="relative">
-                        <button className="relative z-10 px-6 py-3 text-white bg-blue-500 rounded-full border-2 animate-serial-light">
-                            Animated Button
+                    <div className="relative flex items-center justify-center w-40 h-16 group">
+                        <div className="absolute flex items-center justify-center w-[102%] h-[117%] rounded-lg opacity-0 group-hover:opacity-100 animate-ant-move"></div>
+                        <button className="relative z-10 flex items-center justify-center px-6 py-3 text-white bg-blue-500 rounded-lg">
+                            Ant Border Button
                         </button>
+                        {/* this animation is from AntBorderAnimation.css if you want to use this in the design use the CSS file also */}
                     </div>
-                    <div className="relative w-32 h-32 rounded-full border-4 animate-serial-light">asd</div>
                 </div>
             </div>
         </div>
