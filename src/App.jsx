@@ -17,6 +17,10 @@ import APIDevelopment from './pages/APIDevelopment';
 import Navbar from './components/Navbar'; // Import Navbar component
 import Test from './components/Test'; // Import Test component
 import CustomisedDesigns from './components/CustomisedDesigns'; // Import CustomisedDesigns component
+import Parallax from './components/designs/Parallax';
+import SlidingTiles from './components/designs/SlidingTiles'; // Import SlidingTiles component
+import FlowerBackground from './components/designs/FlowerBackground';
+import TextAnimation from './components/designs/TextAnimation'; // Import TextAnimation component
 
 function App() {
     return (
@@ -40,6 +44,10 @@ function App() {
                     <Route path="/navbar" element={<Navbar />} /> {/* Added route for Navbar */}
                     <Route path="/test" element={<Test />} /> {/* Added route for Test */}
                     <Route path="/customised-designs" element={<CustomisedDesigns />} /> {/* Added route */}
+                    <Route path="/parallax" element={<Parallax />} />
+                    <Route path="/sliding-tiles" element={<SlidingTiles />} /> {/* Added route for SlidingTiles */}
+                    <Route path="/Flower-Background" element={<FlowerBackground />} /> {/* Added route for SlidingTiles */}
+                    <Route path="/text-animation" element={<TextAnimation />} /> {/* Added route for TextAnimation */}
                 </Routes>
             </Router>
         </Provider>

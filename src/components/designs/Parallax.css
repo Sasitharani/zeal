@@ -1,0 +1,45 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.parallax {
+  height: 500px; /* Full height for each parallax section */
+  background-attachment: fixed; /* Parallax scrolling effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+}
+
+.parallax1 {
+  background-image: url('/src/img/frontImage.jpeg'); /* First image */
+}
+
+.parallax2 {
+  background-image: url('/src/img/frontImage2.jpeg'); /* Second image */
+}
+
+.parallax3 {
+  background-image: url('/src/img/frontImage3.jpg'); /* Third image */
+}
+
+.parallax4 {
+  background-image: url('/src/img/frontImage4.jpeg'); /* Fourth image */
+}
+
+.content {
+  height: 300px; /* Height for content sections */
+  background: linear-gradient(
+    rgba(85, 139, 151, 0.8),
+    rgba(59, 107, 122, 0.9),
+    rgba(33, 74, 94, 0.1)
+  ); /* Gradient with transparency */
+
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

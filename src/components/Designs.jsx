@@ -8,6 +8,18 @@ const Designs = () => {
             <Link to="/customised-designs" className="text-cyan-900 underline">
              Customised Designs
             </Link>
+            <Link to="/parallax" className="text-cyan-900 underline">
+            Latest Designs
+            </Link>
+            <Link to="/sliding-tiles" className="text-cyan-900 underline">
+            Sliding Tiles
+            </Link>
+            <Link to="/Flower-Background" className="text-cyan-900 underline">
+            Flower Background
+            </Link>
+            <Link to="/text-animation" className="text-cyan-900 underline">
+            Text Animation
+            </Link>
         </div>
     );
 };

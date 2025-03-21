@@ -115,6 +115,67 @@ module.exports = {
                     from: { transform: 'translateY(100%)' },
                     to: { transform: 'translateY(0)' },
                 },
+                'background-shine': {
+                    from: {
+                        backgroundPosition: '0 0', // Define starting position
+                    },
+                    to: {
+                        backgroundPosition: '-200% 0', // Define ending position
+                    },
+                },
+                marquee: {
+                    '0%': { transform: 'translateX(100%)' },
+                    '100%': { transform: 'translateX(-100%)' },
+                },
+                textColor: {
+                    '0%, 100%': { color: '#06b6d4' },
+                    '50%': { color: '#9333ea' },
+                },
+                gradient: {
+                    '0%, 100%': { backgroundPosition: '0% 50%' },
+                    '50%': { backgroundPosition: '100% 50%' },
+                },
+                typing: {
+                    '0%': { width: '0%' },
+                    '100%': { width: '100%' },
+                },
+                shadow: {
+                    '0%, 100%': { textShadow: '0 0 5px #06b6d4' },
+                    '50%': { textShadow: '0 0 20px #9333ea' },
+                },
+                scale: {
+                    '0%, 100%': { transform: 'scale(1)' },
+                    '50%': { transform: 'scale(1.2)' },
+                },
+                rotate: {
+                    '0%': { transform: 'rotate(0deg)' },
+                    '100%': { transform: 'rotate(360deg)' },
+                },
+                fade: {
+                    '0%, 100%': { opacity: '0' },
+                    '50%': { opacity: '1' },
+                },
+                wave: {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-10px)' },
+                },
+                flip: {
+                    '0%, 100%': { transform: 'rotateY(0)' },
+                    '50%': { transform: 'rotateY(180deg)' },
+                },
+                scramble: {
+                    '0%': { content: '"A"' },
+                    '10%': { content: '"B"' },
+                    '20%': { content: '"C"' },
+                    '30%': { content: '"D"' },
+                    '40%': { content: '"E"' },
+                    '50%': { content: '"F"' },
+                    '60%': { content: '"G"' },
+                    '70%': { content: '"H"' },
+                    '80%': { content: '"I"' },
+                    '90%': { content: '"J"' },
+                    '100%': { content: '"Text Scramble"' },
+                },
             },
             animation: {
                 shake: 'shake 0.5s ease-in-out infinite',
@@ -143,6 +204,18 @@ module.exports = {
                 slideLeft: 'slideLeft 1s ease-in-out',
                 slideRight: 'slideRight 1s ease-in-out',
                 slideUp: 'slideUp 1s ease-in-out',
+                'background-shine': 'background-shine 2s linear infinite', // Add custom animation
+                marquee: 'marquee 10s linear infinite',
+                'text-color': 'textColor 3s ease-in-out infinite',
+                gradient: 'gradient 3s ease infinite',
+                typing: 'typing 4s steps(20) infinite',
+                shadow: 'shadow 2s ease-in-out infinite',
+                scale: 'scale 2s ease-in-out infinite',
+                rotate: 'rotate 3s linear infinite',
+                fade: 'fade 3s ease-in-out infinite',
+                wave: 'wave 2s ease-in-out infinite',
+                flip: 'flip 2s ease-in-out infinite',
+                scramble: 'scramble 2s steps(10) infinite',
             },
         },
     },
