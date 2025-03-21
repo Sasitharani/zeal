@@ -21,6 +21,8 @@ import Parallax from './components/designs/Parallax';
 import SlidingTiles from './components/designs/SlidingTiles'; // Import SlidingTiles component
 import FlowerBackground from './components/designs/FlowerBackground';
 import TextAnimation from './components/designs/TextAnimation'; // Import TextAnimation component
+import FontsUse from './components/designs/FontsUse'; // Import FontsUse component
+import Sliders from './components/designs/Sliders'; // Import Sliders component
 
 function App() {
     return (
@@ -48,6 +50,8 @@ function App() {
                     <Route path="/sliding-tiles" element={<SlidingTiles />} /> {/* Added route for SlidingTiles */}
                     <Route path="/Flower-Background" element={<FlowerBackground />} /> {/* Added route for SlidingTiles */}
                     <Route path="/text-animation" element={<TextAnimation />} /> {/* Added route for TextAnimation */}
+                    <Route path="/fonts-use" element={<FontsUse />} /> {/* Added route for FontsUse */}
+                    <Route path="/sliders" element={<Sliders />} /> {/* Added route for Sliders */}
                 </Routes>
             </Router>
         </Provider>

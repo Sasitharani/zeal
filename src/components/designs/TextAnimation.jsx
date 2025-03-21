@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'; // Import Framer Motion
 const TextAnimation = () => {
     const [scrambledText, setScrambledText] = useState('');
     const [showLetterAnimation, setShowLetterAnimation] = useState(true); // State to toggle letter animation
+    const [showStaggeredAnimation, setShowStaggeredAnimation] = useState(true); // State to toggle staggered animation
     const targetText = 'Scrambling Text Animation';
     const morphingWords = ['Morphing', 'Text', 'Animation'];
 
@@ -41,6 +42,16 @@ const TextAnimation = () => {
         };
 
         const interval = setInterval(toggleLetterAnimation, 7000); // Restart letter animation every 7 seconds
+        return () => clearInterval(interval);
+    }, []);
+
+    useEffect(() => {
+        const toggleStaggeredAnimation = () => {
+            setShowStaggeredAnimation(false);
+            setTimeout(() => setShowStaggeredAnimation(true), 100); // Reset animation
+        };
+
+        const interval = setInterval(toggleStaggeredAnimation, 3000); // Restart staggered animation every 3 seconds
         return () => clearInterval(interval);
     }, []);
 
@@ -171,3 +182,57 @@ const TextAnimation = () => {
             )}
 
             {/* Text Morphing Animation */}
+            <motion.div
+                className="text-2xl font-bold text-cyan-900"
+                variants={morphingVariants}
+                initial="hidden"
+                animate="visible"
+            >
+                {morphingWords.map((word, index) => (
+                    <motion.span key={index} className="block">
+                        {word}
+                    </motion.span>
+                ))}
+            </motion.div>
+
+            {/* Text Scale and Bounce Animation */}
+            <motion.div
+                className="text-2xl font-bold text-cyan-900"
+                variants={scaleBounceVariants}
+                initial="hidden"
+                animate="visible"
+            >
+                Scale and Bounce
+            </motion.div>
+
+            {/* Staggered Fade-In Animation */}
+            {showStaggeredAnimation && (
+                <motion.div className="text-2xl font-bold text-cyan-900 flex space-x-2">
+                    {['Staggered', 'Fade-In', 'Animation'].map((word, index) => (
+                        <motion.span
+                            key={index}
+                            custom={index}
+                            variants={staggeredFadeInVariants}
+                            initial="hidden"
+                            animate="visible"
+                        >
+                            {word}
+                        </motion.span>
+                    ))}
+                </motion.div>
+            )}
+
+            {/* Text Glitch Effect */}
+            <motion.div
+                className="text-2xl font-bold text-cyan-900"
+                variants={glitchVariants}
+                initial="hidden"
+                animate="visible"
+            >
+                Glitch Effect
+            </motion.div>
+        </div>
+    );
+};
+
+export default TextAnimation;
