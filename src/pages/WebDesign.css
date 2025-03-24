@@ -1,0 +1,24 @@
+.web-design-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Light background for contrast */
+}
+
+.centered-div {
+    background: linear-gradient(135deg, #214a5e, #3b6b7a, #558b97); /* Diagonal gradient */
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem; /* Rounded corners */
+    text-align: justify;
+    transition: transform 0.3s ease; /* Smooth zoom-out effect */
+    max-width: 600px; /* Set a maximum width */
+    width: 90%; /* Make it responsive */
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 2rem; /* Add top margin */
+}
+
+.centered-div:hover {
+    transform: scale(0.95); /* Zoom-out on hover */
+}

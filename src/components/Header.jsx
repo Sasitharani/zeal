@@ -32,8 +32,7 @@ const Header = () => {
                     <Link to="/about" className="mr-4 hover:shadow-lg hover:shadow-blue-500 px-4 py-2 rounded">About</Link>
                     <Link to="/contact" className="mr-4 hover:shadow-lg hover:shadow-blue-500 px-4 py-2 rounded">Contact</Link>
                     <Link to="/designs" className="mr-4 hover:shadow-lg hover:shadow-blue-500 px-4 py-2 rounded">Designs</Link>
-                    <Link to="/portfolio" className="mr-4 hover:shadow-lg hover:shadow-blue-500 px-4 py-2 rounded">Portfolio</Link>
-                    <Link to="/navbar" className="mr-4 hover:shadow-lg hover:shadow-blue-500 px-4 py-2 rounded">Navbar</Link> {/* Added Navbar link */}
+                    <Link to="/portfolio" className="mr-4 hover:shadow-lg hover:shadow-blue-500 px-4 py-2 rounded">Our Portfolio</Link>
                     {isLoggedIn && (
                         <button onClick={handleLogout} className="bg-red-500 px-4 py-2 rounded hover:shadow-lg hover:shadow-blue-500">Logout</button>
                     )}

@@ -1,0 +1,25 @@
+.scaling-carousel {
+    overflow: visible; /* Ensure the parent container allows overflow */
+}
+
+.scaling-carousel .swiper-slide {
+    transition: transform 0.3s ease-in-out;
+    overflow: visible; /* Allow content to extend beyond the container */
+}
+
+.scaling-carousel .swiper-slide img {
+    width: 60%; /* Decreased before image size by 40% */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* Ensure proper positioning */
+}
+
+.scaling-carousel .swiper-slide-active img {
+    transform: scale(1.5); /* After image grows */
+    transform-origin: center center; /* Ensure scaling happens from the center */
+    z-index: 10; /* Ensure the centered image appears above others */
+    position: relative; /* Ensure the image stays in place */
+    top: 0; /* Prevent the upper part from being hidden */
+}

@@ -8,7 +8,7 @@ const Home = () => {
     <div className="text-center flex flex-col h-screen overflow-hidden">
       <div className="flex-[0.8] relative">
         <img src={frontImage} alt="Front" className="absolute inset-0 w-full h-full object-cover" />
-        <h1 className="text-customBlue text-4xl relative">Zeal Online Solutions</h1> {/* Use customBlue */}
+
         <Link to="/test" className="text-customBlueLight1 underline relative">Test Page</Link> {/* Use customBlueLight1 */}
       </div>
       <div className="h-4"></div> {/* Gap between top and bottom sections */}

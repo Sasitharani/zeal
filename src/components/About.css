@@ -1,0 +1,6 @@
+.gradient-container {
+    background: linear-gradient(135deg, white, #d3d3d3); /* White to gray gradient */
+    padding: 1rem;
+    border-radius: 0.5rem; /* Rounded corners */
+    margin: 1rem 0; /* Add spacing around the container */
+}
