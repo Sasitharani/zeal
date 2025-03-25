@@ -14,7 +14,7 @@ const Home = () => {
       <div className="h-4"></div> {/* Gap between top and bottom sections */}
       <div className="w-4/6 bg-gradient-to-r from-customBlue via-customBlueLight1 to-customBlueLight2 p-2 text-white flex">
         {/* Ensure the custom colors are applied correctly */}
-        <p>Custom gradient background with text</p>
+        <p>What we do..</p>
       </div>
       <div className="flex-[0.8] grid grid-cols-6 gap-4">
         <div id="web_design" className="flex flex-col">
