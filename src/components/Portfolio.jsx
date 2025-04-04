@@ -1,43 +1,43 @@
 import React from 'react';
+import WebsitePreview from './WebsitePreview';
 
 const Portfolio = () => {
     const websites = [
-        { name: "iiti.in", url: "https://iiti.in", screenshot: "/screenshots/iiti.png" },
-        { name: "ksrelectricals.in", url: "https://ksrelectricals.in", screenshot: "/screenshots/ksrelectricals.png" },
-        { name: "sgmmodernbricks.com", url: "https://sgmmodernbricks.com", screenshot: "/screenshots/sgmmodernbricks.png" },
-        { name: "insphile.in", url: "https://insphile.in", screenshot: "/screenshots/insphile.png" },
-        { name: "contests4all.com", url: "https://contests4all.com", screenshot: "/screenshots/contests4all.png" },
+      { name: "IITI Online", url: "https://iiti.in", screenshot: "/img/screenshots/iiti.png" },
+      { name: "KSR Electricals", url: "https://ksrelectricals.in", screenshot: "src/img/screenshots/KSr.jpg" },
+      { name: "SGM Modern Bricks", url: "https://sgmmodernbricks.com", screenshot: "/img/screenshots/sgmmodernbricks.png" },
+      { name: "Insphile", url: "https://insphile.in", screenshot: "src/img/screenshots/insphile.PNG" },
+    //   src/img/screenshots/insphile.png
+      { name: "Contests4All", url: "https://contests4all.com", screenshot: "/img/screenshots/contests4all.png" },
     ];
-
+  
     return (
-        <div className="my-12 mx-36 flex flex-col items-center min-h-screen border-2 border-cyan-900 rounded-lg text-cyan-900">
-            <h2 className="text-2xl font-bold mb-6">Our Portfolio</h2>
-            <div className="grid grid-cols-2 gap-6 w-full px-6">
-                {websites.map((site, index) => (
-                    <div
-                        key={index}
-                        className="border border-gray-300 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
-                    >
-                        <img
-                            src={site.screenshot}
-                            alt={site.name}
-                            className="w-full h-48 object-cover"
-                        />
-                        <div className="p-4 text-center">
-                            <a
-                                href={site.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-blue-500 hover:underline"
-                            >
-                                {site.name}
-                            </a>
-                        </div>
-                    </div>
-                ))}
-            </div>
+      <section className="relative py-16 bg-gradient-to-b from-slate-50 to-white flex justify-center items-center">
+        <div className="container px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <div className="flex flex-col items-center mb-12 text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl mb-2">
+              Our Portfolio
+            </h2>
+            <div className="w-12 h-1 bg-cyan-600 rounded mb-4"></div>
+            <p className="max-w-[700px] text-slate-600">
+              Check out these websites we've created. Hover over each preview to see the site in action.
+            </p>
+          </div>
+  
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {websites.map((site, index) => (
+              <WebsitePreview
+                key={index}
+                name={site.name}
+                url={site.url}
+                screenshot={site.screenshot}
+                index={index}
+              />
+            ))}
+          </div>
         </div>
+      </section>
     );
-};
-
-export default Portfolio;
+  };
+  
+  export default Portfolio;
