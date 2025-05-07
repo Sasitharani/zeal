@@ -23,9 +23,9 @@ const Header = () => {
                 <div className="absolute right-0 top-0 w-8 bg-white rounded-r-full "></div> {/* Arched border */}
             </div>
             <div className="w-1/6 bg-white flex items-center justify-center relative  overflow-hidden"> {/* Rounded width*/}
-                <div className="ml-32 w-1/2 h-full bg-gradient-to-r from-cyan-600 to-cyan-900 rounded-tl-full"></div> {/* Quarter circle (left upper) */}
+                <div className="ml-36 w-1/2 h-full bg-gradient-to-r from-cyan-600 to-cyan-900 rounded-tl-full"></div> {/* Quarter circle (left upper) */}
             </div>
-            <div className="w-4/6 bg-gradient-to-r from-cyan-900 via-cyan-600 to-black p-2 text-white flex justify-start items-center relative"> {/* Balanced width */}
+            <div className="w-5/6  bg-gradient-to-r from-cyan-900 via-cyan-600 to-black p-2 text-white flex justify-start items-center relative  "> {/* Balanced width */}
                 <div className="absolute left-0 top-0 w-8 bg-white rounded-r-full"></div>
                 <nav className="flex-1 flex justify-end items-center">
                     <Link to="/" className="mr-4 hover:shadow-lg hover:shadow-blue-500 px-4 py-2 rounded">Home</Link>

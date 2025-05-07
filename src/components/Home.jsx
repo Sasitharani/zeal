@@ -2,6 +2,7 @@ import React from 'react';
 import { FaLaptopCode, FaProjectDiagram, FaFileAlt, FaGlobe, FaCogs, FaCode } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import frontImage from '../img/frontImage.jpeg';
+import WhatsAppButton from './WhatsAppButton';
 
 const Home = () => {
   return (
@@ -102,6 +103,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <WhatsAppButton />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import FeedbackForm from './FeedbackForm'; // Import the FeedbackForm component
+import WhatsAppButton from './WhatsAppButton';
 
 const Contact = () => {
     return (
@@ -11,6 +12,7 @@ const Contact = () => {
                 Got a project in mind? Contact us today—your success starts here!<br /> <br />
             </p>
             <FeedbackForm /> {/* FeedbackForm already updated to use text-white */}
+            <WhatsAppButton />
         </div>
     );
 };

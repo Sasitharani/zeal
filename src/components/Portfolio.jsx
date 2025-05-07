@@ -1,14 +1,14 @@
 import React from 'react';
 import WebsitePreview from './WebsitePreview';
+import WhatsAppButton from './WhatsAppButton';
 
 const Portfolio = () => {
     const websites = [
       { name: "IITI Online", url: "https://iiti.in", screenshot: "/img/screenshots/iiti.png" },
-      { name: "KSR Electricals", url: "https://ksrelectricals.in", screenshot: "src/img/screenshots/KSr.jpg" },
-      { name: "SGM Modern Bricks", url: "https://sgmmodernbricks.com", screenshot: "src/img/screenshots/sgmmodernbricks.png" },
-      { name: "Insphile", url: "https://insphile.in", screenshot: "src/img/screenshots/insphile.PNG" },
-    //   src/img/screenshots/insphile.png
-      { name: "Contests4All", url: "https://contests4all.com", screenshot: "src/img/screenshots/contests4all.png" },
+      { name: "KSR Electricals", url: "https://ksrelectricals.in", screenshot: "/img/screenshots/KSr.jpg" },
+      { name: "SGM Modern Bricks", url: "https://sgmmodernbricks.com", screenshot: "/img/screenshots/sgmmodernbricks.png" },
+      { name: "Insphile", url: "https://insphile.in", screenshot: "/img/screenshots/insphile.png" },
+      { name: "Contests4All", url: "https://contests4all.com", screenshot: "/img/screenshots/contests4all.png" },
     ];
   
     return (
@@ -36,6 +36,7 @@ const Portfolio = () => {
             ))}
           </div>
         </div>
+        <WhatsAppButton />
       </section>
     );
   };
